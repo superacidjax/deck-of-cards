@@ -6,26 +6,26 @@ class Card
   def initialize rank, suit
     @rank, @suit = rank, suit
   end
-  
+
   def <=> other_card
     self.value <=> other_card.value
   end
-  
+
   def value
     case @rank
     when 'Ace'
-      14
-    when 'King'
-      13
-    when 'Queen'
-      12
-    when 'Jack'
       11
+    when 'King'
+      10
+    when 'Queen'
+      10
+    when 'Jack'
+      10
     else
       @rank
     end
   end
-  
+
   def to_s
     "#{@rank} of #{@suit}"
   end
